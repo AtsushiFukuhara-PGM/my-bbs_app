@@ -1,5 +1,3 @@
-# my-bbs_app
-
 ````markdown
 # MyBBS App
 
@@ -49,9 +47,14 @@
 5. `server/db.js` 内の接続情報を自分の環境に合わせて修正
 6. サーバー起動
 
-   ```bash
-   node server/index.js
+開発時（ホットリロード有り）:
+```bash
+npx nodemon ./server/index.js
+
    ```
+本番想定（通常起動）:
+node server/index.js
+
 7. ブラウザで [http://localhost:3000](http://localhost:3000) にアクセス
 
 ---
