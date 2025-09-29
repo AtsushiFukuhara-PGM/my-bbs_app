@@ -1,0 +1,157 @@
+<!-- htmlの記述 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>BBS</title>
+    <link href=
+    "https://fonts.googleapis.com/css2?family=
+    Noto+Sans+JP:wght@400;700&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">BBS</div>
+        <div class="header-right">
+            <button id="logoutBtn">ログアウト</button>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#">BBS</a></li>
+            <li><a href="#">チャット</a></li>
+            <li><a href="#">マイプロフィール</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- ホーム画面 -->
+        <section id="home" class="view">
+            <div class="home-content">
+                <img src="home-logo.png" alt="ロゴ画像" class="home-logo">
+                <h2>ようこそ！</h2>
+            </div>
+        </section>
+
+        <!-- 掲示板画面 -->
+        <section id="bbs" class="view">
+            <aside class="sidebar">
+                <button class="add-category-button">+ カテゴリ追加</button>
+                <!-- <details open>
+                    <summary>
+                        <span class="category-label">会話</span>
+                    </summary>
+                    <img src="plus.png" alt="スレッド追加" class="add-thread-button">
+                    <ul class="thread-list">
+                        <li><a href="#">雑談スレ</a></li>
+                        <li><a href="#">趣味スレ</a></li>
+                        <li><a href="#">質問スレ</a></li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>お知らせ</summary>
+                    <ul class="thread-list">
+                        <li><a href="#">更新情報</a></li>
+                        <li><a href="#">イベント案内</a></li>
+                    </ul>
+                </details> -->
+            </aside>
+        
+            <section class="content">
+                <!-- スレッド名を表示 -->
+                <div class="thread-header"></div>
+                <div class="messages">
+                </div>
+
+                <form action="" class="input-area">
+                    <textarea placeholder="メッセージを入力……"rows="1"></textarea>
+                    <button type="submit">送信</button>
+                </form>
+            </section>
+        </section>
+        <!-- チャット画面 -->
+        <section id="chat" class="view">
+            <aside class="chat-sidebar">
+                <h3>ユーザー一覧</h3>
+                <ul id="chatUserList">
+                    <!-- ここにユーザー一覧が同的に追加される -->
+                </ul>
+            </aside>
+            <section class="chat-content">
+                <!-- 会話相手の名前 -->
+                <div class="chat-header" id="chatHeader">相手を選択してください</div>
+                <!-- メッセージ一覧 -->
+                <div class="chat-messages" id="chatMessages"></div>
+                <!-- 入力欄 -->
+                <form id="chatForm" class="input-area" style="display: none;">
+                    <textarea id="chatInput" placeholder="メッセージを入力..." rows="1"></textarea>
+                    <button type="submit">送信</button>
+                </form>
+            </section>
+        </section>
+        <!-- マイプロフィール画面 -->
+         <section id="profile" class="view">
+            <div class="profile-container">
+                <img src="user-icon.png" alt="ユーザーアイコン" class="profile-icon">
+                <h2>マイプロフィール</h2>
+                <div class="profile-info">
+                    <p><strong>ID:</strong><span id="profileId"></span></p>
+                    <p>
+                        <strong>ユーザー名:</strong><span id="profileUsername"></span>
+                        <img src="rename-pen.png" alt="リネーム" id="renameUsernameBtn">
+                    </p>
+                    <p>
+                        <strong>メールアドレス:</strong><span id="profileEmail"></span>
+                        <img src="rename-pen.png" alt="リネーム" id="renameEmailBtn">
+                    </p>
+                    <p>
+                        <strong>パスワード:</strong><span id="profilePassword"></span>
+                        <img src="rename-pen.png" alt="リネーム" id="renamePasswordBtn">
+                    </p>
+                </div>
+            </div>
+         </section>
+        <!-- ログイン画面 -->
+        <section id="login" class="view active">
+            <div class="login-container">
+                <h2>ログイン</h2>
+                <form id="loginForm">
+                    <input type="text" id="loginUsername"
+                    placeholder="ユーザー名" required>
+                    <input type="text" inputmode="latin" id="loginPassword"
+                    placeholder="パスワード"
+                    pattern="^[\x21-\x7E]{2,}$"
+                    title="半角英数字と記号のみ、2文字以上で入力してください"
+                    required>
+                    <button type="submit">ログイン</button>
+                </form>
+
+                <h2>新規登録</h2>
+                <form id="registerForm">
+                    <input type="text" id="registerUsername"
+                    placeholder="ユーザー名" required>
+                    <input type="email" id="registerEmail"
+                    placeholder="メールアドレス"
+                    pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
+                    title="半角英数字と記号(@._%+-)のみ利用できます"
+                    required>
+                    <input type="text" inputmode="latin" id="registerPassword"
+                    placeholder="パスワード"
+                    pattern="^[\x21-\x7E]{2,}$"
+                    title="半角英数字と記号のみ、2文字以上で入力してください"
+                    required>
+                    <button type="submit">登録</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- <script src="data.js"></script> -->
+    <script src="ui.js"></script>
+    <script src="events.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
