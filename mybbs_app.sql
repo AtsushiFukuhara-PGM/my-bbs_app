@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- データベース: `mybbs_app`
 --
-
+create database if not exists mybbs_app;
+use mybbs_app;
 -- --------------------------------------------------------
 
 --
