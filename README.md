@@ -32,7 +32,7 @@
    ```bash
    git clone https://github.com/username/mybbs-app.git
    cd mybbs-app
-````
+```
 
 3. 依存パッケージをインストール
 
