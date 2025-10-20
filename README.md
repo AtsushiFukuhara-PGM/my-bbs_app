@@ -95,4 +95,13 @@ README.md
 
 ![チャット画面](./chat_demo1.png)
 
+---
+
+## 🪄 ライセンス
+
+MIT License
+© 2025 AtsushiFukuhara-PGM
+
+---
+
 
