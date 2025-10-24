@@ -1,9 +1,9 @@
 # MyBBS App
 
-シンプルな掲示板 & チャットアプリです。
-※AI（ChatGPTなど）を活用して設計・開発しました 
-**Node.js + Express + MySQL (MariaDB)** を使用して実装しました。  
-フロントはバニラ JavaScript で構築しています。
+-シンプルな掲示板 & チャットアプリです。
+-※AI（ChatGPTなど）を活用して設計・開発しました 
+-**Node.js + Express + MySQL (MariaDB)** を使用して実装しました。  
+-フロントはバニラ JavaScript で構築しています。
 
 ---
 
